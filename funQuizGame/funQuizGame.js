@@ -12,7 +12,7 @@ function game (){
     };
     
     Question.prototype.onScreen = function () {
-        return this.quest + "\n" + "1) " + this.ans[0] + "\n" +"2) "+ this.ans[1] + "\n" +"3) "+ this.ans[2] + "\n" + "You can enter EXIT and and the game";
+        return this.quest + "\n" + "1) " + this.ans[0] + "\n" +"2) "+ this.ans[1] + "\n" +"3) "+ this.ans[2] + "\n" + "You can enter EXIT and and the game.";
     };
     
     
