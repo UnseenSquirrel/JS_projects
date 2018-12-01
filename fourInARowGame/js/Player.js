@@ -4,6 +4,17 @@ class Player{
         this.color = color;
         this.id = id;
         this.active = active;
-        this.tokens = [];
+        this.tokens = this.createTokens(21);
+    }
+
+    createTokens(num){
+        const tokens = [];
+        
+        for (let i = 0; i < num; i++){
+            let token = new Token(i, this);
+            tokens.push(token);
+
+        }
+        return token;
     }
 }
