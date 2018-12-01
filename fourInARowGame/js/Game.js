@@ -1,19 +1,27 @@
 class Game{
-   constructor(board, players, ready){
+   constructor(){
        this.board = new Board();
        this.players = this.createPlayers();
        this.ready = false;
 
    }
 
-   createPlayers(){
-        const players = [new Player('Player 1', 1, '#e12358', true), 
-        new Player('Player 2', 2, '#e59a58') ];
+
+   get activePlayer(){
+       return this.players.find(player => player.active);
+   }
+   createPlayers() {
+        const players = [new Player('Player 1', 1, '#e12358', true), new Player('Player 2', 2, '#e59a58') ];
         return players;
    }
 
    startGame(){
-
-    
+     this.board.drawHTMLBoard();
+     this.activePlayer.activeToken.drawHTMLToken();
+     this.ready = true;
    }
 }
+
+
+   
+    
